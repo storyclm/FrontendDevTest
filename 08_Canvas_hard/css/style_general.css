@@ -1,0 +1,409 @@
+﻿@charset "utf-8";
+/*================================== Table of Contents ===================================================================================== */
+/*  RESET
+/*  1. Global Structure
+/*  2. Header
+/*  3. Content
+/*  4. Footer
+/*  5. Text styles
+/*=============================================================================================================================================*/
+
+
+
+/* ============================================================================================================================================ */
+/*      RESET     */                                                             								                 /*    RESET    */
+/* ============================================================================================================================================ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+del, dfn, em, font, img, ins, q, 
+small, strike, strong, sub, sup, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+footer, header, 
+article, aside, canvas, nav, section, 
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	font-size: 100%; 
+	vertical-align: baseline;
+	outline: 0;
+	padding: 0; 
+	margin: 0; 	
+	}
+		
+/* HTML5 display-role reset for older browsers */
+article, footer, header, menu, nav, section, aside, canvas { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none;}
+
+a:focus { outline:none; }
+
+blockquote { quotes: none; }
+blockquote:before, blockquote:after { 
+	content: ''; 
+	content: none; 
+	}
+
+table, caption, tbody, tfoot, thead, tr, th, td { 
+	border:none; 
+	border-collapse: collapse; 
+	border-spacing: 0;
+	vertical-align: middle;
+	margin: 0; 	
+	padding: 0;
+	}
+	
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/Copy of UIWebView */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+}
+
+
+@font-face {
+    font-family: 'pragmaticacregular';
+    src: url('fonts/pragmaticac_36349-webfont.woff') format('woff'),
+         url('fonts/pragmaticac_36349-webfont.ttf') format('truetype'),
+         url('fonts/pragmaticac_36349-webfont.svg#pragmaticacregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'pragmaticacbold';
+    src: url('fonts/pt-webfont.woff') format('woff'),
+         url('fonts/pt-webfont.ttf') format('truetype'),
+         url('fonts/pt-webfont.svg#pragmaticacbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+	
+/* ============================================================================================================================================ */
+/*      1.  Global   Structure     */                                                                            /*    1.  Global   Structure   */
+/* ============================================================================================================================================ */
+html { 
+	height:768px; 
+	width:1024px;  
+	}
+body { 
+	height:768px; 
+	width:1024px;  
+	font-family: 'pragmaticacregular', Helvetica, Tahoma, sans-serif;
+	color:#333333; 
+	}
+	.wrapper { 
+		position:relative;
+        height:768px; 
+		width:1024px;
+		background-size:100% 100%;
+		overflow:hidden;
+		}
+
+	
+	/* ----------------------------------------------------------------------------  Header */
+		header {
+			position: relative;
+			height:47px;
+			padding: 23px 0 0 23px;
+			}
+
+			
+	/* ----------------------------------------------------------------------------  Content */
+		.Stage_base {
+			position:relative;
+			height:698px;
+			-webkit-box-sizing: border-box;
+			}
+
+
+	/* -----------------------------------------------------------------------------  Footer */
+		footer { 
+			position: absolute;
+			right: 30px;
+			bottom:22px;
+    		width:56px;
+			height:56px;
+			}
+
+
+/* -----------------------------------------------------------------------------  General tags */
+a { text-decoration: none; }
+
+.fl_left 	{ float:left;   }
+.fl_right 	{ float:right;  }
+.center		{ margin-left:auto; margin-right:auto; }
+.block 		{ display:block; }
+
+.center_box {
+	width: inherit;
+	height:inherit;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	}
+	
+.clear { 
+	height:0px; 
+	clear:both; 
+	display:block; 
+	}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	zoom:1;
+	}	
+
+
+
+/* ============================================================================================================================================= */
+/*      2.   Header Slide     */                               		                 	                            /*      2.   Header Slide    */
+/* ============================================================================================================================================= */
+
+header:after {
+	content:'';
+	position:absolute;
+	top:45px;
+	left:330px;
+	right:0;
+	height:23px;
+	background:#1a4793;
+	}
+	
+header .logo {
+	width:310px;
+	height:45px;
+	background: url(../images/logo.png) no-repeat 0 0;
+	background-size:100% 100%;
+	text-indent:-7000px;
+	}
+
+
+/* ============================================================================================================================================= */
+/*      3.   Section  Content     */                               		                 	                   /*      3.   Section  Content     */
+/* ============================================================================================================================================= */
+
+.flex_box { display: -webkit-box; }
+
+	.flex_column-1 {
+		width: 1px;
+		-webkit-box-flex: 1;
+		}
+	.flex_column-2 {
+		width: 1px;
+		-webkit-box-flex: 2;
+		}
+	.flex_column-3 {
+		width: 1px;
+		-webkit-box-flex: 3;
+		}
+
+
+/* -----------------------------------------------------------------------------  chart */
+.chart_title {
+	font-size:19px;
+	line-height:22px;
+	color:#58595b;
+	padding:0 0 8px 5px;
+	}
+	
+.chart_field {
+	height:295px;
+	background:rgba(255,255,255, 0.6);
+	color:#58595b;
+	padding:20px 20px 17px 17px;
+	margin-bottom:15px;
+	}
+	.chart_grid {
+		position:relative;
+		float:left;
+		height:275px;
+		width:397px;
+		border-bottom:3px solid #a7a9ac;
+		border-left:3px solid #a7a9ac;
+		}
+		.chart_grid .line {
+			height:2px;
+			background:#d1d3d4;
+			display:block;
+			margin:7px 0 64px;
+			}
+		.chart {
+			position: absolute;
+			top:0;
+			left:0;
+			height: inherit;
+			width: inherit;
+			overflow:hidden;
+			}
+		
+	ul.axisY_calibre {
+		float:left;
+		width:25px;
+		}
+		ul.axisY_calibre li {
+			position:relative;
+			height:30px;
+			font-size:12px;
+			line-height:12px;
+			}
+			ul.axisY_calibre li:after {
+				content:'';
+				position: absolute;
+				top:6px;
+				left:28px;
+				height:2px;
+				width:397px;
+				background:#d1d3d4;
+				}
+		
+		
+	ul.axisX_calibre {
+		float:right;
+		height:12px;
+		width:397px;
+		padding-top:5px;
+		}
+		ul.axisX_calibre li {
+			position:relative;
+			float: left;
+			width:50%;
+			font-size:12px;
+			line-height:12px;
+			text-align:center;
+			}
+			ul.axisX_calibre li:after {
+				content:'';
+				position: absolute;
+				top:-13px;
+				right:-1px;
+				width:3px;
+				height:15px;
+				background:#a7a9ac;
+				}
+				ul.axisX_calibre li:last-child:after { display:none; }
+
+
+ul.legend {
+	width:100%;
+	}
+	ul.legend li {
+		height:20px;
+		font-size:16px;
+		line-height:20px;
+		color:#58595b;
+		}
+		ul.legend li.chart_stile {
+			padding-left:70px;
+			}
+
+
+
+
+
+
+
+
+
+
+/* ============================================================================================================================================== */
+/*    4.      Footer     */                                                          		  						    	/*    4.      Footer  */   
+/* ============================================================================================================================================== */
+
+footer .btn_home { 
+    width:56px;
+	height:56px;
+	background:url(../images/icon_home.png) no-repeat 0 0;
+	background-size:100% 100%;
+	display:block;
+	}
+
+
+/* ============================================================================================================================================ */
+/*     5.    Text styles     */                                                                                  /*     5.    Text styles     */   
+/* ============================================================================================================================================ */
+
+h1, h2, h3, h4 {
+	font-weight:400;
+	color:#1a4793;
+	}
+	
+h1 {
+	font-size:28px; 
+	line-height:32px;
+	text-align:center;
+	}
+h2 {
+	font-size:25px; 
+	line-height:29px;
+	text-align:center;
+	}
+h3 {
+	font-size:23px; 
+	line-height:27px;
+	}
+h4 {
+	font-family:'pragmaticacbold', Helvetica, sans-serif;
+	font-size:20px;
+	line-height:22px;
+	padding-bottom:11px;
+	}
+	h4 p {
+		font-family: 'pragmaticacregular', Helvetica, Tahoma, sans-serif;
+		padding-top:4px;
+		}
+/*h5 {
+	font-size:20px;
+	font-weight:400;
+	line-height:20px;
+	color:#000000;
+	}
+
+*/
+
+
+/*
+sub, sup {
+    position: relative;
+    font-size: 65%;
+    line-height: 0;
+	font-weight:600;
+    vertical-align: baseline;
+	}
+	sup { top: -7px; }
+	sub { bottom: -7px; }
+	
+	header.slide_header h1 sup { top: -12px; }
+
+ */	
+ 
+strong {
+	font-family:'pragmaticacbold', Helvetica, sans-serif;
+	font-weight:400;
+	}
+
+.refer {
+	position:absolute;
+	left:40px;
+	bottom:0;
+	width:700px;
+	font-size:12px;
+	line-height:15px;
+	color:#333333;
+	}
+	
+	
+
+
+
+
+
+
+

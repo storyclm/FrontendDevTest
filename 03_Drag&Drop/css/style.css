@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'Pragmatica Cyrillic';
+  src: url('fonts/PragmaticaCyrillic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/PragmaticaCyrillic.woff') format('woff'), 
+  url('fonts/PragmaticaCyrillic.ttf')  format('truetype'), 
+  url('fonts/PragmaticaCyrillic.svg#PragmaticaCyrillic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Pragmatica Cyrillic';
+  src: url('fonts/PragmaticaBoldCyrillic.eot?#iefix') format('embedded-opentype'),  
+  url('fonts/PragmaticaBoldCyrillic.woff') format('woff'), 
+  url('fonts/PragmaticaBoldCyrillic.ttf')  format('truetype'), 
+  url('fonts/PragmaticaBoldCyrillic.svg#PragmaticaBoldCyrillic') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+html{
+  height: 100%;
+  overflow: hidden;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: normal;
+  font-family: 'Pragmatica Cyrillic',sans-serif; Helvetica, Arial;
+  width: 1024px;
+  height: 768px;
+  overflow: hidden;
+  -webkit-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+
+
+.content, .bg{
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  overflow:hidden;
+  -webkit-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.buttons button{
+  width: 296px;
+  height: 64px;
+  font-family: 'Pragmatica Cyrillic',sans-serif; Helvetica, Arial;
+  font-size: 21px;
+  font-weight: bold;
+  color: #FFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-background-size: contain !important;
+  -o-background-size: contain !important;
+  background-size: contain !important;
+  letter-spacing: 1px;
+}
+
+        body {
+            background: url(../images/bg11.jpg) 0 0 no-repeat;
+        }
+
+        .bg {
+            background: url(../images/bg1.jpg) 0 0 no-repeat;
+            z-index: 1;
+        }
+
+        .content {
+            z-index: 10;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        .img1 {
+            left: -25px;
+            top: 327px;
+        }
+
+        .img2 {
+            width: 242px;
+            left: 700px;
+            top: 480px;
+        }
+
+        .img3 {
+            width: 242px;
+            left: 533px;
+            top: 392px;
+        }
+
+        .img4 {
+            width: 242px;
+            left: 533px;
+            top: 149px;
+        }
+
+        .img5 {
+            width: 242px;
+            left: 705px;
+            top: 233px;
+        }
+
+        .img6 {
+            left: -29px;
+            top: 307px;
+            border-radius:5px;
+        }
+
+        .img7 {
+            width: 827px;
+            height:100px;
+            position:absolute;
+            top: 19px;
+            left: -860px;
+             background:#4cff00;
+        }
+
+        .img8 {
+            width: 315px;
+            left: 653px;
+            top: 188px;
+            height:300px;
+            display: none;
+            background:#db7575;
+        }
+
+.buttons button:active, .buttons button:focus{
+  background: none;
+  color: #222D67;
+}
+
+.buttons .btn-wrap{
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  width: 296px;
+  height: 64px;
+  margin-bottom: 70px;
+}
+
+
+
+
