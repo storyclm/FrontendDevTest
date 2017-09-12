@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="background">
+        <div class="column">
+	        <input class="hide" type="checkbox" id="css">
+	        <label for="css" class="block activate active_css"><span>On/Off CSS</span></label>
+	        <div class="block opacity"></div>
+	        <div class="block rotate"></div>
+	        <div class="block scale"></div>
+	        <div class="block translate"></div>
+        </div>
+        <div class="column">
+	        <div id='js' class="block activate active_js"><span>On/Off JS</span></div>
+	        <div id="js-opacity" class="block opacity"></div>
+	        <div id="js-rotate" class="block rotate"></div>
+	        <div id="js-scale" class="block scale"></div>
+	        <div id="js-translate" class="block translate"></div>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+	    $('#js').click( function() {
+		    if($('#js.activate').hasClass('active_js')){
+		    	animate();
+			    $('#js').removeClass('active_js');
+		    } else {
+			    reset();
+			    $('#js').addClass('active_js');
+		    }
+	    });
+    </script>
+</body>
+
+</html>

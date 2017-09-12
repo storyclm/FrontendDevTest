@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title></title>
+</head>
+<body>
+<div class="bg"></div>
+<div class="content">
+	<img src="images/img19_6.png" class="img6 dropElement" width="636">
+	<img src="images/img19_4.png" class="img4 gift">
+	<img src="images/img19_5.png" class="img5 gift">
+	<img src="images/img19_3.png" class="img3 gift">
+	<img src="images/img19_2.png" class="img2 gift">
+	<img src="images/img19_1.png" class="img1" width="566">
+	<div class="img7"></div>
+	<div class="img8"></div>
+</div>
+<script src="js/jquery-1.8.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script>
+	$(function () {
+		var count = 0;
+		$('.gift').draggable({
+			containment: "parent",
+			revert: 'invalid',
+			appendTo: '.box'
+		});
+		$('.img1').droppable({
+			drop: function(event, ui) {
+				moveTo(ui.draggable, $('.img1'));
+				count += 1;
+				if(count == 4){
+					$('.bg').css('display','none').delay(1500).queue(function () {
+						$('.img8').css('position', 'relative').css('display', 'block');
+						$('.img7').animate({left: 0}, 1000);
+						});
+				}
+			}
+		});
+
+		function moveTo(element, target) {
+			var targetOffset = target.offset();
+			element.animate({
+				top: targetOffset.top + 150,
+				left: targetOffset.left + 200
+			}, 1000);
+		}
+	});
+</script>
+</body>
+</html>
