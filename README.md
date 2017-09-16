@@ -1,9 +1,5 @@
 <h1>Frontend developer interview test</h1>
 
-```
-Срок - 1 день.
-```
-
 <h2>Задания</h2>
 
 <h3>1. Нарезка</h3>
