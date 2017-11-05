@@ -182,7 +182,7 @@
     <div class="Layer3"></div>
     <div class="textFooter">0</div>
     <div class="parentSlider">
-        <div class="Layer4"></div>
+        <div class="Layer4 ui-slider-handle ui-state-default ui-corner-all"></div>
     </div>
     <div class="Peshki">
         <div class="Layer5 p10"></div>
@@ -202,7 +202,65 @@
     <script src="js/hammer.js"></script>
     <script>
         $(function () {
-           
+            var handle = $( ".Layer4" );
+            $(".parentSlider").slider({
+                create: function() {
+                    $('.textFooter').text(ui.value);
+                },
+                slide: function( event, ui ) {
+                    $('.textFooter').text(ui.value);
+                    if (ui.value >= 10) {
+                        $('.p1').show();
+                    } else {
+                        $('.p1').hide();
+                    }
+                    if (ui.value >= 20) {
+                        $('.p2').show();
+                    } else {
+                        $('.p2').hide();
+                    }
+                    if (ui.value >= 30) {
+                        $('.p3').show();
+                    } else {
+                        $('.p3').hide();
+                    }
+                    if (ui.value >= 40) {
+                        $('.p4').show();
+                    } else {
+                        $('.p4').hide();
+                    }
+                    if (ui.value >= 50) {
+                        $('.p5').show();
+                    } else {
+                        $('.p5').hide();
+                    }
+                    if (ui.value >= 60) {
+                        $('.p6').show();
+                    } else {
+                        $('.p6').hide();
+                    }
+                    if (ui.value >= 70) {
+                        $('.p7').show();
+                    } else {
+                        $('.p7').hide();
+                    }
+                    if (ui.value >= 80) {
+                        $('.p8').show();
+                    } else {
+                        $('.p8').hide();
+                    }
+                    if (ui.value >= 90) {
+                        $('.p9').show();
+                    } else {
+                        $('.p9').hide();
+                    }
+                    if (ui.value >= 100) {
+                        $('.p10').show();
+                    } else {
+                        $('.p10').hide();
+                    }
+                }
+            });
         });
     </script>
 </body>
