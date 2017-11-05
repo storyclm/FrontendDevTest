@@ -24,7 +24,25 @@
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
         $(function () {
-
+            $('.gift').draggable({
+                revert: true
+            });
+            $('.img6').droppable({
+                drop: function(event, ui) {
+                    ui.draggable.addClass('droped');
+                    ui.draggable.toggle('drop', {direction: "down"}, 500);
+                    if ($('.droped').length == 4) {
+                        $('.bg').fadeOut('slow');
+                        $('.img7').animate({
+                            left: '0'
+                        }, 500)
+                        $('.img8').css({
+                            position: 'absolute',
+                            display: 'block'
+                        });
+                    }
+                }
+            });
         });
     </script>
 </body>
