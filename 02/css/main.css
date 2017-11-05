@@ -135,3 +135,72 @@ body {
     top: 0px;
     background-color: aliceblue
 }
+
+/* default elems */
+.css, .js {
+    width: 122px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+.elem {
+    width: 100px;
+    height: 100px;   
+    text-align: center;
+    line-height: 100px;
+    transition: .2s;
+}
+/* custom elems for css */
+.green {
+    background: green;
+    cursor: pointer;
+}
+.red {
+    background: red;
+}
+.blue {
+    background: blue;
+}
+.yellow {
+    background: yellow;
+}
+.grey {
+    background: grey;
+}
+.green--end {
+    background: green;
+}
+
+/* css trans */
+.green:active ~ .red {
+    transform: scale(1.3, 1.3);
+}
+.green:active ~ .yellow {
+    transform: translate(50px, -50px);
+}
+.green:active ~ .blue {
+    transform: rotate(-15deg);
+}
+.green:active ~ .grey {
+    opacity: 0;
+}
+
+/* custom elems for js */
+.__js_start, .__js_reset {
+    background: green;
+    cursor: pointer;
+}
+.__js_scale {
+     background: red;
+}
+.__js_anim {
+    background: yellow;
+}
+.__js_rotate {
+    background: blue;
+}
+.__js_fade {
+    background: grey;
+}

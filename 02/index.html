@@ -11,14 +11,65 @@
 </head>
 <body>
     <div id="background">
-
+        <div class="css">
+            <div class="elem green">start css</div>
+            <div class="elem red">trans scale</div>
+            <div class="elem yellow">trans anim</div>
+            <div class="elem blue">trans rotate</div>
+            <div class="elem grey">trans fade</div>
+        </div>
+        <div class="js">
+            <div class="elem __js_start">start js</div>
+            <div class="elem __js_scale">js scale</div>
+            <div class="elem __js_anim">js anim</div>
+            <div class="elem __js_rotate">js rotate</div>
+            <div class="elem __js_fade">js fade</div>
+            <div class="elem __js_reset">reset js</div>
+        </div>
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-ui-1.10.4.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
         $(function () {
-           
+            // start js
+            $('.__js_start').on('click', function () {
+                // scale
+                $('.__js_scale').animate({
+                    width: '120px',
+                    height: '120px',
+                    lineHeight: '120px'
+                }, 10);
+                // anim
+                $('.__js_anim').animate({
+                    marginLeft: '50px'
+                }, 10);
+                // rotate
+                $('.__js_rotate').css({
+                    WebkitTransform: 'rotate(-15deg)'
+                }, 10);
+                // fade
+                $('.__js_fade').fadeOut('slow');
+            });
+            // reset js
+            $('.__js_reset').on('click', function () {
+                 // scale
+                $('.__js_scale').animate({
+                    width: '100px',
+                    height: '100px',
+                    lineHeight: '100px'
+                }, 10);
+                // anim
+                $('.__js_anim').animate({
+                    marginLeft: '0'
+                }, 10);
+                 // rotate
+                $('.__js_rotate').css({
+                    WebkitTransform: 'rotate(0deg)'
+                }, 10);
+                // fade
+                $('.__js_fade').fadeIn('slow');
+            });
         });
     </script>
 </body>
