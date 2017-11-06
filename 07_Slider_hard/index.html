@@ -14,6 +14,19 @@
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script>
         $(function () {
+            $('.drag_red').draggable({
+                axis: "y",
+                containment: $('.map_area')
+            });
+            $('.yellow').droppable({
+                over: function() {
+                    $(this).css('backgroundImage', 'url(images/refract/man_red.png)');
+                },
+                out: function() {
+                    $(this).css('backgroundImage', 'url(images/refract/man_white.png)');
+                }
+            });
+            $('.yellow').droppable("option", "tolerance", "touch");
         });
     </script>
 </head>
